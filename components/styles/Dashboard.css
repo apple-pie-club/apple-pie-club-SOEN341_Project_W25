@@ -8,6 +8,16 @@
     src:local('Panton'), url(./fonts/Panton-Trial-Black.ttf) format('truetype');
 }
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#dashboardContainer{
+    display:flex;
+    height:100vh;
+}
 #sidebar{
     background-color:#124559;
     list-style-type:none;
@@ -18,7 +28,6 @@
     top:0;
     height:100vh;
     left:0;
-    display:flex;
     overflow-y:auto;
 }
 
@@ -38,10 +47,18 @@
     position:sticky;
     z-index:10;
     top:0;
+    box-shadow: 0 4px 8px 0 #ffffff13;
 }
 
 #addChannel{
     font-size:15px;
+    font-family:'Comfortaa';
+    margin-top:10px;
+}
+
+#addChannel:hover{
+    text-decoration:underline;
+    cursor:pointer;
 }
 .channelName{
     font-family:'Comfortaa';
@@ -81,7 +98,7 @@
     position: fixed;
     bottom: 0;
     left: 200px; 
-    width: calc(100% - 220px);
+    width: calc(100% - 200px);
     height:50px;
     background-color: #f1f1f1;
     display: flex;
@@ -113,4 +130,37 @@
 #messageBar button:hover {
     background-color: #668a97;
     transition:0.20s ease;
+}
+
+#messagesArea{
+    margin-left:200px;
+    margin-bottom:50px;
+    width:calc(100vw - 150px);
+    height: calc(100vh - 50px);
+    background-color:#f1f1f1;
+    padding:0px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+.receivedMessage{
+    margin:10px;
+    padding:10px;
+    width:40%;
+    background-color:white;
+    border-radius:10px;
+    border-bottom-left-radius: 0;
+    align-self:flex-start;
+}
+
+.sentMessage{
+    margin:10px;
+    padding:10px;
+    width:40%;
+    background-color:#598291;
+    color:white;
+    border-radius:10px;
+    border-bottom-right-radius:0;
+    align-self:flex-end;
 }

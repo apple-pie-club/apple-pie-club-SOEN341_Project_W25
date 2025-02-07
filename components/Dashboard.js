@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaArrowUp, FaPlus } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 import "./styles/Dashboard.css"
 
 export default function DashboardPage() {
@@ -8,6 +9,9 @@ export default function DashboardPage() {
     // use .map() to list the channels on the sidebar
     
     // need to call an api endpoint to get the messages to display
+
+
+    // need logic to add channel
 
     const [message, setMessage] = useState("");
     const handleSendMessage = () => {
@@ -50,6 +54,11 @@ return (
             <li class="channelName">Channel</li>
             <li class="channelName">Channel</li>
         </ul>
+        </div>
+
+        <div id="messagesArea">
+            <div class="sentMessage">message 1 message 1 message 1 message 1message 1 message 1 message 1 message 1message 1 </div>
+            <div class="receivedMessage">message 2</div>
         </div>
         <div id="messageBar">
                 <input
